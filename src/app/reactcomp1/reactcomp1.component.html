@@ -1,0 +1,9 @@
+<form [formGroup]="myForm" (ngSubmit)="OnSubmit()">
+<input type="text" placeholder="Enter user name" formControlName="firstName"> <br>
+<input type="text" placeholder="Enter user last name" formControlName="lastname"> <br>
+<input type="text" placeholder="Enter user email" formControlName="email"> <br>
+<input type="text" placeholder="Enter user password " formControlName="password" #pass> <br>
+<input type="text" placeholder="Enter user confirm password" formControlName="confirmpassword" #confPass (blur)="checkPass(pass.value, confPass.value)"> <br>
+<div class="text-danger" *ngIf="checkpassss">Password mismatch </div>
+<button class="btn btn-primary">Submit</button>
+</form>

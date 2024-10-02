@@ -1,0 +1,23 @@
+
+
+<label>{{name}}</label>
+
+<p>Server with Id {{serverId}} is {{getServerStatus()}}</p>
+
+
+<button [disabled]="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">Add server</button>
+
+<div>{{serverCreationStatus}}</div>
+<!-- <img [src]="imgUrl" > -->
+
+
+<div>
+    Two way data binding example : 
+</div>
+
+<div>
+    <input type="text" [(ngModel)]="serverName" >
+</div>
+{{serverName}}
+
+<app-demo></app-demo>
